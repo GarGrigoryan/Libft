@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 21:05:41 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/01/27 21:45:51 by gargrigo         ###   ########.fr       */
+/*   Created: 2026/01/27 21:11:13 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/01/27 21:43:57 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*p;
+	unsigned char	*q;
 	size_t			i;
 
-	p = (unsigned char *)s;
+	if (!dest && !src)
+		return (0);
 	i = 0;
+	p = (unsigned char *)dest;
+	q = (unsigned char *)src;
 	while (i < n)
 	{
-		p[i] = (unsigned char)c;
+		p[i] = q[i];
 		i++;
 	}
-	return (s);
+	return (dest);
 }
