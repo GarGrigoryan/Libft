@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/30 18:25:55 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/01/30 19:23:02 by gargrigo         ###   ########.fr       */
+/*   Created: 2025/10/23 13:22:08 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/01/30 19:02:56 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_atoi(char *str)
 {
-	const unsigned char	*p;
-	unsigned char		q;
-	size_t				i;
+	int	i;
+	int	sign;
+	int	sum;
 
-	if (n == 0)
-		return (0);
-	p = (const unsigned char *)s;
-	q = (unsigned char)c;
 	i = 0;
-	while (i < n)
+	sign = 1;
+	sum = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	while (str[i] == '-' || str[i] == '+')
 	{
-		if (p[i] == q)
-			return ((void *)(p + i));
+		if (str[i] == '-')
+			sign *= -1;
 		i++;
 	}
-	return (0);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		sum = (sum * 10) + str[i] - '0';
+		i++;
+	}
+	return (sum * sign);
 }
