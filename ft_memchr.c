@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 21:11:13 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/01/30 18:27:53 by gargrigo         ###   ########.fr       */
+/*   Created: 2026/01/30 18:25:55 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/01/30 18:54:41 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*d;
-	unsigned char	*s;
-	size_t			i;
+	const unsigned char	*p;
+	unsigned char		q;
+	size_t				i;
 
-	if (!dest && !src)
+	if (n == 0)
 		return (0);
+	p = (const unsigned char *)s;
+	q = (unsigned char)c;
 	i = 0;
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
 	while (i < n)
 	{
-		d[i] = s[i];
+		if (p[i] == q)
+			return ((void *)p + i);
 		i++;
 	}
-	return (dest);
+	return (0);
 }
