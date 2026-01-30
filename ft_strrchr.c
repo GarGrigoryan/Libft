@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/30 17:25:46 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/01/30 17:38:08 by gargrigo         ###   ########.fr       */
+/*   Created: 2026/01/30 17:37:24 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/01/30 17:47:44 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
+	char	*last;
+
+	last = 0;
 	while (*s)
 	{
 		if (*s == (char)c)
-			return ((char *)s);
+			last = (char *)s;
 		s++;
 	}
 	if (c == '\0')
 		return ((char *)s);
-	return (0);
+	return (last);
 }

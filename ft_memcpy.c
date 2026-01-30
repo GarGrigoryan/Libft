@@ -6,13 +6,13 @@
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 21:11:13 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/01/27 21:43:57 by gargrigo         ###   ########.fr       */
+/*   Updated: 2026/01/30 17:37:55 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*p;
 	unsigned char	*q;
