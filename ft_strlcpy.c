@@ -5,25 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 20:30:41 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/01/30 17:52:50 by gargrigo         ###   ########.fr       */
+/*   Created: 2026/02/06 16:57:00 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/02/06 16:57:01 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	if (size == 0)
 		return (ft_strlen(src));
-	while (i < size - 1 && src[i] != '\0')
+	while (i < size - 1 && src[i])
 	{
-		dest[i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	dst[i] = '\0';
 	return (ft_strlen(src));
 }

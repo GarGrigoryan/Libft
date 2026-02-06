@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/30 16:34:07 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/01/30 17:15:21 by gargrigo         ###   ########.fr       */
+/*   Created: 2026/02/06 16:57:36 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/02/06 16:57:38 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,11 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s;
-	size_t				i;
 
 	if (n == 0 || dest == src)
 		return (dest);
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
-	i = 0;
 	helper(s, d, n);
 	return (dest);
 }
