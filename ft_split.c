@@ -39,32 +39,38 @@ static char     **ft_free(char **str, int i)
     return (NULL);
 }
 
-char    **ft_split(char const *s, char c)
+static char **ft_fill(char const *s, char c, char **str)
 {
-    char    **str;
-    int     i;
-    int     j;
+    int i;
+    int j;
 
-    if (!s)
-        return (NULL);
-    str = (char **)malloc((ft_word_count(s,c) + 1) * sizeof(char *));
-    if (!str)
-        return (NULL);
     i = 0;
     j = 0;
     while (s[i])
     {
-        if (s[i] != c)
+        if (s[i] == c)
+            i++;
+        else
         {
             str[j] = ft_substr(s, i, ft_word_len(&s[i], c));
             if (!str[j])
                 return (ft_free(str, j));
-            j++;
             i += ft_word_len(&s[i], c);
+            j++;
         }
-        else
-            i++;
     }
     str[j] = NULL;
     return (str);
+}
+
+char    **ft_split(char const *s, char c)
+{
+    char    **str;
+
+    if (!s)
+        return (NULL);
+    str = malloc((ft_word_count(s, c) + 1) * sizeof(char *));
+    if (!str)
+        return (NULL);
+    return (ft_fill(s, c, str));
 }
