@@ -1,6 +1,7 @@
-#include <libft.h>
+#include "libft.h"
+#include <stdlib.h>
 
-static unsigned int     ft_word_cound(char const *s, char c)
+static unsigned int     ft_word_count(char const *s, char c)
 {
     unsigned int    i;
     unsigned int    count;
@@ -64,4 +65,6 @@ char    **ft_split(char const *s, char c)
         else
             i++;
     }
+    str[j] = NULL;
+    return (str);
 }

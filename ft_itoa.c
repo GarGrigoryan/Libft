@@ -50,6 +50,7 @@ char	*ft_itoa(int n)
 
     num = n;
     len = ft_getlength(num);
+    str = NULL;
     str = ft_num_to_str(n, str, len);
     if (!str)
         return (NULL);

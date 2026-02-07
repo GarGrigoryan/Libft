@@ -6,19 +6,18 @@
 /*   By: garik <garik@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 16:56:15 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/07 22:30:47 by garik            ###   ########.fr       */
+/*   Updated: 2026/02/08 00:25:47 by garik            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char		*str;
-	size_t		i;
 	size_t		slen;
 
-	i = 0;
 	if (!s)
 		return (NULL);
 	slen = ft_strlen(s);
