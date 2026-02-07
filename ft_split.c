@@ -59,7 +59,7 @@ static char **ft_fill(char const *s, char c, char **str)
             j++;
         }
     }
-    str[j] = NULL;
+    str[j] = '\0';
     return (str);
 }
 
