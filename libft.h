@@ -6,7 +6,7 @@
 /*   By: garik <garik@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 18:04:41 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/08 22:27:35 by garik            ###   ########.fr       */
+/*   Updated: 2026/02/08 23:20:11 by garik            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ void            ft_putendl_fd(char *s, int fd);
 void            ft_putnbr_fd(int n, int fd);
 void            ft_lstadd_front(t_list **lst, t_list *new);
 void            ft_lstadd_back(t_list **lst, t_list *new);
+void            ft_lstdelone(t_list *lst, void (*del)(void *));
+void            ft_lstclear(t_list **lst, void (*del)(void *));
 void			*ft_memset(void *s, int c, size_t n);
 void			*ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
