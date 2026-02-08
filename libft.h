@@ -6,13 +6,19 @@
 /*   By: garik <garik@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 18:04:41 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/08 21:00:05 by garik            ###   ########.fr       */
+/*   Updated: 2026/02/08 22:03:58 by garik            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
+
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
 
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
@@ -48,5 +54,6 @@ char            **ft_split(char const *s, char c);
 size_t			ft_strlen(const char *c);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
+t_list          *ft_lstnew(void *content);
 
 #endif
