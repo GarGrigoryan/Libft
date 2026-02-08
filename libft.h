@@ -6,7 +6,7 @@
 /*   By: garik <garik@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 18:04:41 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/08 22:17:45 by garik            ###   ########.fr       */
+/*   Updated: 2026/02/08 22:22:51 by garik            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,6 @@ size_t			ft_strlen(const char *c);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 t_list          *ft_lstnew(void *content);
+t_list          *ft_lstlast(t_list *lst);
 
 #endif
