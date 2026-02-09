@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: garik <garik@student.42.fr>                +#+  +:+       +#+        */
+/*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/06 16:58:14 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/07 22:28:36 by garik            ###   ########.fr       */
+/*   Created: 2026/02/09 17:37:05 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/02/09 17:37:07 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 #include <stdint.h>
 
