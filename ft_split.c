@@ -6,7 +6,7 @@
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 17:31:16 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/09 17:32:42 by gargrigo         ###   ########.fr       */
+/*   Updated: 2026/02/09 18:46:28 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ static char	**ft_fill(char const *s, char c, char **str)
 			j++;
 		}
 	}
-	str[j] = '\0';
+	str[j] = NULL;
 	return (str);
 }
 
