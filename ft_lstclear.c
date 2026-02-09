@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/06 16:56:31 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/09 21:21:18 by gargrigo         ###   ########.fr       */
+/*   Created: 2026/02/09 17:36:21 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/02/09 17:36:30 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
-{
-	char	*last;
+#include "libft.h"
+#include <stdlib.h>
 
-	last = 0;
-	while (*s)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
+{
+	t_list	*temp;
+
+	if (!lst || !del)
+		return ;
+	while (*lst)
 	{
-		if (*s == (char)c)
-			last = (char *)s;
-		s++;
+		temp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = temp;
 	}
-	if (c == '\0')
-		return ((char *)s);
-	return (last);
+	*lst = NULL;
 }

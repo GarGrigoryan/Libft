@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/06 16:57:40 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/06 16:57:42 by gargrigo         ###   ########.fr       */
+/*   Created: 2026/02/09 17:37:38 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/02/09 17:37:40 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t			i;
 
 	if (!dest && !src)
-		return (0);
+		return (NULL);
 	i = 0;
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;

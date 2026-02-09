@@ -5,12 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/06 16:56:55 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/06 16:56:57 by gargrigo         ###   ########.fr       */
+/*   Created: 2026/02/09 20:57:31 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/02/09 20:57:33 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+#include <stddef.h>
+
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 

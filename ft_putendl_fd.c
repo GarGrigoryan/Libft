@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/06 16:56:31 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/09 21:21:18 by gargrigo         ###   ########.fr       */
+/*   Created: 2026/02/09 17:33:25 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/02/09 17:33:33 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
-{
-	char	*last;
+#include <unistd.h>
 
-	last = 0;
+void	ft_putendl_fd(char *s, int fd)
+{
+	if (!s)
+		return ;
 	while (*s)
 	{
-		if (*s == (char)c)
-			last = (char *)s;
+		write(fd, s, 1);
 		s++;
 	}
-	if (c == '\0')
-		return ((char *)s);
-	return (last);
+	write(fd, "\n", 1);
 }

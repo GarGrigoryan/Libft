@@ -5,14 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/06 16:56:49 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/06 16:56:51 by gargrigo         ###   ########.fr       */
+/*   Created: 2026/02/09 20:57:40 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/02/09 20:57:42 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include <stddef.h>
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)

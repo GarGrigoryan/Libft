@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/06 16:56:31 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/09 21:21:18 by gargrigo         ###   ########.fr       */
+/*   Created: 2026/02/09 17:26:24 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/02/09 17:26:43 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
-{
-	char	*last;
+#include "libft.h"
 
-	last = 0;
-	while (*s)
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	if (!new)
+		return ;
+	if (!*lst)
 	{
-		if (*s == (char)c)
-			last = (char *)s;
-		s++;
+		*lst = new;
+		return ;
 	}
-	if (c == '\0')
-		return ((char *)s);
-	return (last);
+	new->next = *lst;
+	*lst = new;
 }

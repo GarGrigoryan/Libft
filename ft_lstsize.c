@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/06 16:56:31 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/09 21:21:18 by gargrigo         ###   ########.fr       */
+/*   Created: 2026/02/09 17:34:09 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/02/09 17:34:37 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
-{
-	char	*last;
+#include "libft.h"
 
-	last = 0;
-	while (*s)
+int	ft_lstsize(t_list *lst)
+{
+	unsigned int	count;
+
+	count = 0;
+	while (lst)
 	{
-		if (*s == (char)c)
-			last = (char *)s;
-		s++;
+		count++;
+		lst = lst->next;
 	}
-	if (c == '\0')
-		return ((char *)s);
-	return (last);
+	return (count);
 }

@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/06 16:56:31 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/09 21:21:18 by gargrigo         ###   ########.fr       */
+/*   Created: 2026/02/09 17:30:25 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/02/09 17:31:04 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char	*last;
+	unsigned int	i;
 
-	last = 0;
-	while (*s)
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i])
 	{
-		if (*s == (char)c)
-			last = (char *)s;
-		s++;
+		(*f)(i, &s[i]);
+		i++;
 	}
-	if (c == '\0')
-		return ((char *)s);
-	return (last);
 }

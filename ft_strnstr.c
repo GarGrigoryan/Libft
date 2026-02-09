@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/06 16:56:38 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/06 16:56:41 by gargrigo         ###   ########.fr       */
+/*   Created: 2026/02/09 17:38:17 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/02/09 17:38:18 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

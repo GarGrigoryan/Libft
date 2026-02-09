@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/09 17:38:25 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/09 17:38:26 by gargrigo         ###   ########.fr       */
+/*   Created: 2026/02/09 17:35:01 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/02/09 17:35:11 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-char	*ft_strtrim(char const *s1, char const *set)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int		begin_index;
-	int		end_index;
-	int		len;
+	t_list	*new_list;
+	t_list	*new_node;
 
-	if (!s1 || !set)
+	if (!lst || !f || !del)
 		return (NULL);
-	begin_index = 0;
-	end_index = ft_strlen(s1) - 1;
-	while (s1[begin_index] && ft_strchr(set, s1[begin_index]))
-		begin_index++;
-	while (end_index >= begin_index && ft_strchr(set, s1[end_index]))
-		end_index--;
-	len = end_index - begin_index + 1;
-	if (len < 0)
-		len = 0;
-	return (ft_substr(s1, begin_index, len));
+	new_list = NULL;
+	new_node = NULL;
+	while (lst)
+	{
+		new_node = ft_lstnew((f)(lst->content));
+		if (!new_node)
+		{
+			ft_lstclear(&new_list, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_list, new_node);
+		lst = lst->next;
+	}
+	return (new_list);
 }
