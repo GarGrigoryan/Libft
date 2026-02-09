@@ -47,7 +47,7 @@ cc your_program.c -L. -lft
 
 ## Library Description
 
-Libft consists of two main parts: mandatory functions and bonus functions.
+Libft consists of various functions, which are showed below.
 
 ### Mandatory Functions
 
