@@ -1,15 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/09 17:30:25 by gargrigo          #+#    #+#             */
+/*   Updated: 2026/02/09 17:31:04 by gargrigo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-
-void    ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    unsigned int i;
+	unsigned int	i;
 
-    if (!s || !f)
-        return ;
-    i = 0;
-    while (s[i])
-    {
-        (*f)(i, &s[i]);
-        i++;
-    }
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		(*f)(i, &s[i]);
+		i++;
+	}
 }
