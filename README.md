@@ -126,7 +126,6 @@ All functions follow the same behavior and return values as their standard libra
 ### Documentation
 - [The C Programming Language](https://en.wikipedia.org/wiki/The_C_Programming_Language) - Kernighan & Ritchie
 - [man pages](https://man7.org/linux/man-pages/) - Linux manual pages for standard C functions
-- [42 Documentation](https://github.com/42School/42-cursus) - 42 curriculum resources
 
 ### References
 - [C Standard Library Reference](https://en.cppreference.com/w/c/header)
