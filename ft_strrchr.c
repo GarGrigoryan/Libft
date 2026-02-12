@@ -6,22 +6,26 @@
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 16:56:31 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/09 21:21:18 by gargrigo         ###   ########.fr       */
+/*   Updated: 2026/02/12 13:05:32 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*last;
+	char			*last;
+	unsigned char	uc;
 
-	last = 0;
+	uc = (unsigned char)c;
+	last = NULL;
 	while (*s)
 	{
-		if (*s == (char)c)
+		if (*s == uc)
 			last = (char *)s;
 		s++;
 	}
-	if (c == '\0')
+	if (*s == uc)
 		return ((char *)s);
 	return (last);
 }

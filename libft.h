@@ -6,7 +6,7 @@
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 18:04:41 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/09 17:29:43 by gargrigo         ###   ########.fr       */
+/*   Updated: 2026/02/12 12:24:21 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int				ft_toupper(int c);
 int				ft_tolower(int c);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
-int				ft_atoi(char *str);
+int				ft_atoi(const char *str);
 int				ft_lstsize(t_list *lst);
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 void			ft_putchar_fd(char c, int fd);

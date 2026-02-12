@@ -6,7 +6,7 @@
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 17:37:57 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/09 17:37:59 by gargrigo         ###   ########.fr       */
+/*   Updated: 2026/02/12 13:50:46 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ char	*ft_strdup(const char *s)
 	int			len;
 	int			i;
 
-	if (!s)
-		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
 	ptr = (char *)malloc((len + 1) * sizeof(char));

@@ -6,19 +6,21 @@
 /*   By: gargrigo <gargrigo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 17:37:53 by gargrigo          #+#    #+#             */
-/*   Updated: 2026/02/09 17:37:55 by gargrigo         ###   ########.fr       */
+/*   Updated: 2026/02/12 13:01:43 by gargrigo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == (char)c)
+		if (*s == (unsigned char)c)
 			return ((char *)s);
 		s++;
 	}
-	if (c == '\0')
+	if (*s == (unsigned char)c)
 		return ((char *)s);
-	return (0);
+	return (NULL);
 }
