@@ -8,7 +8,7 @@ Libft is a custom C library that reimplements a subset of standard C library fun
 
 This library provides essential functions for string manipulation, memory management, character classification, type conversion, and linked list operations. It serves as a foundation for future 42 projects, where students will use this library instead of standard library functions.
 
-## Instructions ooo
+## Instructions
 
 ### Compilation
 
